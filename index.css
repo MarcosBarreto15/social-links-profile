@@ -27,6 +27,7 @@
 .g-text{
     font-size: var(--fs-xl);
     font-weight: 500;
+    margin-block-end: 0.625rem;
 }
 
 .m-text{
@@ -63,12 +64,10 @@ body {
     width: 5.625rem;
     height: 5.625rem;
     border-radius: 50%;
-    margin-bottom: 1.25rem;
+    margin-block-end: 1.25rem;
 }
 
-h1 {
-    margin-block-end: 0.625rem;
-}
+
 
 .profile h2 {
     color: var(--verde);
@@ -93,13 +92,24 @@ h1 {
     color: var(--branco);
     text-decoration: none;
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
     font-weight: 700;
+    transition: background-color 0.3s ease;
+    
 }
 
-.links-profile ul li a:hover {
+@media (prefers-reduced-motion: reduce) {
+    .links-profile ul li a {
+        transition: none;
+    }
+}
+
+
+
+.links-profile ul li a:hover,
+.links-profile ul li a:focus {
     background-color: var(--verde);
     color: var(--cinza-escuro);
+    outline: none;
 }
 
 
